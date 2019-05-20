@@ -34,6 +34,7 @@ module Binda
 		has_many :checkboxes,    as: :fieldable
 		has_many :relations,     as: :fieldable
 		has_many :svgs,          as: :fieldable
+		has_many :media,				 as: :fieldable
 
 		# The following direct associations are used to securely delete associated fields
 		# Infact via `fieldable` the associated fields might not be deleted 

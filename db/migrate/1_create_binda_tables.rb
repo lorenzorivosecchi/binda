@@ -102,6 +102,15 @@ class CreateBindaTables < ActiveRecord::Migration[5.0]
       t.timestamps
     end
 
+    create_table :binda_media do |t|
+      t.string           :name
+      t.text             :description
+      t.belongs_to       :field_setting
+      t.references       :fieldable, polymorphic: true, index: true
+      t.string           :type
+      t.timestamps
+    end
+
     create_table :binda_dates do |t|
       t.datetime         :date
       t.belongs_to       :field_setting
